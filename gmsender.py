@@ -56,7 +56,7 @@ def send_gm_transaction(web3, wallet, contract_address):
     }
 
     signed_tx = web3.eth.account.sign_transaction(tx, wallet["private_key"])
-    tx_hash = web3.eth.send_raw_transaction(signed_tx.raw_transaction)
+    tx_hash = web3.eth.send_raw_transaction(signed_tx.rawTransaction)
     print(f"[{address}] ✅ GM sent! TX hash: {tx_hash.hex()}")
     return tx_hash.hex()
 
